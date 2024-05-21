@@ -31,7 +31,6 @@ export default function SignIn() {
       
       if (data.success === false){
         dispatch(signInFailure(data))
-        return
       };
       dispatch(signInSuccess(data));
       navigate('/');
