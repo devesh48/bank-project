@@ -49,7 +49,7 @@ export default function Profile() {
     e.preventDefault();
     try{
       dispatch(updateUserStart());
-      const res = await fetch(`http://localhost:3002/api/user/update/${currentUser._id}`, {
+      const res = await fetch(`/api/user/update/${currentUser._id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ export default function Profile() {
     e.preventDefault();
     try{
       dispatch(deleteUserStart());
-      const res = await fetch(`http://localhost:3002/api/user/delete/${currentUser._id}`, {
+      const res = await fetch(`/api/user/delete/${currentUser._id}`, {
         method: 'DELETE'
       });
       const data = await res.json();
